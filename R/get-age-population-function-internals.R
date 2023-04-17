@@ -221,6 +221,24 @@ predict_to_long_age_ranges <- function(pop_model, fit) {
 #' @noRd
 #' @keywords internal
 build_lookup_populations <- function(age, pred) {
+  max_age <- max(age)
+  if (max(pred$age) > max_age) {
+    # Throw a warning that our long range is longer and adjust
+    warning("Long ages are too high")
+    pred <- pred %>%
+      dplyr::mutate(
+        age = if_else(
+          age > max_age, max_age, age
+        )
+      ) %>%
+      dplyr::group_by(
+        age
+      ) %>%
+      dplyr::summarise(
+        population = sum(population)
+      ) %>%
+      dplyr::ungroup()
+  }
   tibble::tibble(
     age = age
   ) %>%
