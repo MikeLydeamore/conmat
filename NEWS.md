@@ -1,3 +1,4 @@
+
 # conmat 0.0.2.9000
 
 ## Changes
@@ -8,6 +9,12 @@
   * `as_setting_prediction_matrix()` for coercing lists into a `setting_prediction_matrix`
   * `transmission_probability_matrix()` for creating new transmission probability
   matrices
+
+* there is now a print method for age group information in setting matrices - [#139](https://github.com/njtierney/conmat/issues/139)
+
+* improved age break checking [#138](https://github.com/njtierney/conmat/issues/138)
+
+* extended `add_school_work_participation()`, `add_modelling_features()`, `fit_single_contact_model()`, `fit_setting_contacts()`, `estimate_setting_contacts()` to use different school and work demographics arguments. (#82 and #15, resolved by #153).
 
 ## Breaking changes
 

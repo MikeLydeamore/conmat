@@ -244,8 +244,7 @@ build_lookup_populations <- function(age, pred) {
   ) %>%
     dplyr::left_join(
       pred,
-      by = "age",
-      multiple = "all"
+      by = "age"
     ) %>%
     dplyr::mutate(
       population = tidyr::replace_na(population, 0)
