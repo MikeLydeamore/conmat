@@ -1,0 +1,13 @@
+pandoc: 3.1.11
+pkgdown: 2.1.1
+pkgdown_sha: ~
+articles:
+  conmat-population: conmat-population.html
+  data-sources: data-sources.html
+  example-pipeline: example-pipeline.html
+  getting-started: getting-started.html
+  other-data-sources: other-data-sources.html
+  parallel-computing: parallel-computing.html
+  sir-model: sir-model.html
+  visualising-conmat: visualising-conmat.html
+last_built: 2025-01-28T05:51Z
